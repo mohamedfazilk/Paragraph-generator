@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import data from './data'
 
 function App() {
+  //initial count is set to 0
   const [count, setCount] = useState(0);
   const [text, setText] = useState([])
 
+  //when submitting the form for avoiding unnecessary rendering
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log('hi im here');
