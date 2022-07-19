@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import data from './data'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState([])
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log('hi im here');
+
+  }
+
+ return <section className='section-center'>
+   <h3>Did You Want how many Para</h3>
+   <form className='lorem-form' onSubmit={handleSubmit}>
+     <label htmlFor="amount">
+       Paragraphs:
+     </label>
+     <input type="number" name='amount' id='amount' value={count} 
+     onChange={(e)=>setCount(e.target.value)} />
+     
+   </form>
+
+ </section>
 }
 
 export default App;
