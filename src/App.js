@@ -11,6 +11,14 @@ function App() {
     e.preventDefault();
     console.log('hi im here');
     let amount = parseInt(count)
+    if(amount <= 0){
+      amount=1
+    }
+
+    if(amount >=8)
+    {
+      amount=8
+    }
     
     setText(data.slice(0,amount))
     // setCount(typeof count)//count is showing as a string
