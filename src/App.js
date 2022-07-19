@@ -11,6 +11,8 @@ function App() {
     e.preventDefault();
     console.log('hi im here');
     setText(data)
+    setCount(typeof count)//count is showing as a string
+    console.log(count);
 
   }
 
