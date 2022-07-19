@@ -10,9 +10,11 @@ function App() {
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log('hi im here');
-    setText(data)
-    setCount(typeof count)//count is showing as a string
-    console.log(count);
+    let amount = parseInt(count)
+    
+    setText(data.slice(0,amount))
+    // setCount(typeof count)//count is showing as a string
+   
 
   }
 
