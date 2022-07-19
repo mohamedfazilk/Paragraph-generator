@@ -10,6 +10,7 @@ function App() {
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log('hi im here');
+    setText(data)
 
   }
 
@@ -25,15 +26,10 @@ function App() {
    </form>
 
    <article className='lorem-text'>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a perspiciatis 
-       possimus excepturi! Provident voluptatem amet officia, vel magni,
-        quo veritatis praesentium, sed quasi ipsam eius ea nostrum optio totam?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a perspiciatis 
-       possimus excepturi! Provident voluptatem amet officia, vel magni,
-        quo veritatis praesentium, sed quasi ipsam eius ea nostrum optio totam?
-        </p>
+    {text.map((item,index)=>{
+      return <p key={index}>{item}</p>
+
+    })}
    </article>
   
 
